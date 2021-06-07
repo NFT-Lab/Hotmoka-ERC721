@@ -1,1 +1,1 @@
-# Hotmoka-ERC721
+# Hotmoka ERC721

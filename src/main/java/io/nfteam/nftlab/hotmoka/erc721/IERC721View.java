@@ -1,4 +1,4 @@
-package io.nfteam.nftlab.hotmoka.ERC721;
+package io.nfteam.nftlab.hotmoka.erc721;
 
 import io.takamaka.code.lang.Contract;
 import io.takamaka.code.lang.View;

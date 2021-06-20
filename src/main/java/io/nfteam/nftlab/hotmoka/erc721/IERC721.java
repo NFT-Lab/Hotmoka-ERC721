@@ -1,4 +1,4 @@
-package io.nfteam.nftlab.hotmoka.ERC721;
+package io.nfteam.nftlab.hotmoka.erc721;
 
 import io.takamaka.code.lang.Contract;
 import io.takamaka.code.lang.Event;
@@ -80,7 +80,7 @@ public interface IERC721 extends IERC721View {
    * Emits a {IERC721.Transfer} event.
    */
   @FromContract
-  void safeTranderFrom(Contract from, Contract to, UnsignedBigInteger tokenId, byte[] data);
+  void safeTransferFrom(Contract from, Contract to, UnsignedBigInteger tokenId, byte[] data);
 
   /**
    * Emitted when (@code tokenId) token is transferred from (@code from) to (@code to).

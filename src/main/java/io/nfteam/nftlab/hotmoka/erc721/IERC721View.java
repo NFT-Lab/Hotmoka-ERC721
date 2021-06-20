@@ -34,5 +34,6 @@ public interface IERC721View {
   @View
   boolean isApprovedForAll(Contract owner, Contract operator);
 
+  @View
   IERC721View snapshot();
 }

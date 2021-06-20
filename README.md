@@ -1,3 +1,1 @@
 # Hotmoka ERC721
-
-[comment]: <> (e4d23f8bc733760cfde544a31c27a0d45561830e5e91b529177f32117ba76f39)

@@ -7,12 +7,12 @@ import io.takamaka.code.math.UnsignedBigInteger;
 
 abstract public class ERC721Burnable extends ERC721
 {
-  public @FromContract
+  public
   ERC721Burnable(String name, String symbol) {
     super(name, symbol);
   }
 
-  public @FromContract
+  public
   ERC721Burnable(String name, String symbol, boolean generateEvents) {
     super(name, symbol, generateEvents);
   }

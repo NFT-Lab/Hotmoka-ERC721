@@ -7,15 +7,15 @@ import io.takamaka.code.util.StorageMap;
 import io.takamaka.code.util.StorageMapView;
 import io.takamaka.code.util.StorageTreeMap;
 
-public abstract class ERC721URIStorage extends ERC721 implements IERC721URIStorageView {
+abstract public class ERC721URIStorage extends ERC721 implements IERC721URIStorageView {
   private final StorageMap<UnsignedBigInteger, String> tokenURIs = new StorageTreeMap<>();
 
-  public @FromContract
+  public
   ERC721URIStorage(String name, String symbol) {
     super(name, symbol);
   }
 
-  public @FromContract
+  public
   ERC721URIStorage(String name, String symbol, boolean generateEvents) {
     super(name, symbol, generateEvents);
   }
@@ -44,7 +44,7 @@ public abstract class ERC721URIStorage extends ERC721 implements IERC721URIStora
    *
    * - (@code tokenId) must exist.
    */
-  protected @FromContract
+  protected
   void _setTokenURI(UnsignedBigInteger tokenId, String tokenURI) {
     Takamaka.require(_exists(tokenId), "ERC721URIStorage: URI set of nonexistent token");
     tokenURIs.put(tokenId, tokenURI);
@@ -60,7 +60,7 @@ public abstract class ERC721URIStorage extends ERC721 implements IERC721URIStora
    * Emits a (@link ERC721.Transfer) event.
    */
   @Override
-  protected @FromContract
+  protected
   void _burn(UnsignedBigInteger tokenId) {
     super._burn(tokenId);
 

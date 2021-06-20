@@ -22,7 +22,6 @@ abstract public class ERC721Enumerable extends ERC721 implements IERC721Enumerab
   // Mapping from token id to position in the allTokens array
   private final StorageMap<UnsignedBigInteger, UnsignedBigInteger> allTokensIndex = new StorageTreeMap<>();
 
-
   public ERC721Enumerable(String name, String symbol) {
     super(name, symbol);
   }
@@ -54,10 +53,7 @@ abstract public class ERC721Enumerable extends ERC721 implements IERC721Enumerab
   }
 
   @Override
-  protected @FromContract
-  void _beforeTokenTransfer(Contract from, Contract to, UnsignedBigInteger tokenId) {
-    super._beforeTokenTransfer(from, to, tokenId);
-
+  protected void _beforeTokenTransfer(Contract from, Contract to, UnsignedBigInteger tokenId) {
     if (from == null) {
       _addTokenToAllTokensEnumeration(tokenId);
     } else if (from != to) {
